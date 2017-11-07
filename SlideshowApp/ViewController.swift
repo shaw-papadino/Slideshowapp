@@ -29,6 +29,13 @@ class ViewController: UIViewController {
     
     @IBAction func Tapimage(_ sender: Any) {
         performSegue(withIdentifier: "result", sender: nil)
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+            stButton.setTitle("再生", for: .normal)
+            prButton.isEnabled = true
+            nxButton.isEnabled = true
+        }
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }

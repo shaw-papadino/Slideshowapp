@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,25 +19,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0e-ud-mmI">
-                                <rect key="frame" x="41" y="266" width="31" height="30"/>
+                                <rect key="frame" x="41" y="453" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kt2-E3-r4D"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zC6-bU-a8c">
-                                <rect key="frame" x="41" y="120" width="223" height="103"/>
+                                <rect key="frame" x="41" y="120" width="278" height="290"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="uYm-bU-xwX" appends="YES" id="1B3-nR-zt9"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJk-3p-S64">
-                                <rect key="frame" x="137" y="266" width="31" height="30"/>
+                                <rect key="frame" x="164.5" y="453" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <state key="highlighted">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-sd-5EH">
-                                <rect key="frame" x="233" y="266" width="31" height="30"/>
+                                <rect key="frame" x="288" y="453" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uup-oS-FpM"/>
@@ -96,14 +96,14 @@
                         <viewControllerLayoutGuide type="bottom" id="nV3-wa-JXx"/>
                     </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qBa-e2-Icy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uok-NC-EkS">
-                                <rect key="frame" x="18" y="60" width="288" height="183"/>
+                                <rect key="frame" x="18" y="60" width="343" height="377"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVF-XC-aPM">
-                                <rect key="frame" x="145" y="288" width="31" height="30"/>
+                                <rect key="frame" x="145" y="517" width="86" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="o7E-05-uqL" kind="unwind" unwindAction="unwind:" id="e5l-Ew-ncg"/>
@@ -114,9 +114,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bVF-XC-aPM" secondAttribute="trailing" constant="128" id="3Z0-dV-vwa"/>
                             <constraint firstItem="Uok-NC-EkS" firstAttribute="top" secondItem="4gu-lE-cy2" secondAttribute="bottom" constant="40" id="8FJ-KG-iNy"/>
+                            <constraint firstItem="nV3-wa-JXx" firstAttribute="top" secondItem="bVF-XC-aPM" secondAttribute="bottom" constant="120" id="IfX-2e-5HD"/>
                             <constraint firstItem="bVF-XC-aPM" firstAttribute="leading" secondItem="qBa-e2-Icy" secondAttribute="leadingMargin" constant="129" id="MzC-0o-J1B"/>
-                            <constraint firstItem="nV3-wa-JXx" firstAttribute="top" secondItem="bVF-XC-aPM" secondAttribute="bottom" constant="162" id="biO-JH-2f2"/>
-                            <constraint firstItem="bVF-XC-aPM" firstAttribute="top" secondItem="Uok-NC-EkS" secondAttribute="bottom" constant="45" id="kiE-cU-LhK"/>
+                            <constraint firstItem="bVF-XC-aPM" firstAttribute="top" secondItem="Uok-NC-EkS" secondAttribute="bottom" constant="80" id="Oyt-cO-vrO"/>
                             <constraint firstItem="Uok-NC-EkS" firstAttribute="trailing" secondItem="qBa-e2-Icy" secondAttribute="trailingMargin" constant="2" id="oyY-Im-Oc5"/>
                             <constraint firstItem="Uok-NC-EkS" firstAttribute="leading" secondItem="qBa-e2-Icy" secondAttribute="leadingMargin" constant="2" id="tym-aj-oLr"/>
                         </constraints>
