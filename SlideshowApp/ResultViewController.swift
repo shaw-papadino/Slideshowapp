@@ -11,18 +11,11 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    var dispImageNo = 0
+    var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let imageNameArray = [
-            "4336112.jpg",
-            "4336111.jpg",
-            "4336110.jpg",
-            ]
-        let name = imageNameArray[dispImageNo]
         
         let image = UIImage(named: name)
         

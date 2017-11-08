@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var stButton: UIButton!
+    @IBOutlet weak var prButton: UIButton!
+    @IBOutlet weak var nxButton: UIButton!
     
     var timer:Timer!
     var timer_sec: Float = 0
-    
+    var dispImageNo = 0
+    var name = ""
     
     @IBAction func susumu(_ sender: Any) {
         dispImageNo += 1
@@ -26,24 +30,6 @@ class ViewController: UIViewController {
         
         displayImage()
     }
-    
-    @IBAction func Tapimage(_ sender: Any) {
-        performSegue(withIdentifier: "result", sender: nil)
-        if self.timer != nil {
-            self.timer.invalidate()
-            self.timer = nil
-            stButton.setTitle("再生", for: .normal)
-            prButton.isEnabled = true
-            nxButton.isEnabled = true
-        }
-    }
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-    }
-    
-    @IBOutlet weak var stButton: UIButton!
-    @IBOutlet weak var prButton: UIButton!
-    @IBOutlet weak var nxButton: UIButton!
-    
     @IBAction func start(_ sender: Any) {
         if self.timer != nil {
             self.timer.invalidate()
@@ -59,14 +45,35 @@ class ViewController: UIViewController {
             nxButton.isEnabled = false
         }
     }
-    var dispImageNo = 0
+    
+    
+    @IBAction func Tapimage(_ sender: Any) {
+        performSegue(withIdentifier: "result", sender: nil)
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+            stButton.setTitle("再生", for: .normal)
+            prButton.isEnabled = true
+            nxButton.isEnabled = true
+        }
+    }
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        let image = UIImage(named: "4336112.jpg")
+        imageView.image = image
+    }
     func displayImage(){
         
         let imageNameArray = [
             "4336112.jpg",
             "4336111.jpg",
             "4336110.jpg",
-        ]
+            ]
         if dispImageNo < 0 {
             dispImageNo = 2
         }
@@ -74,17 +81,10 @@ class ViewController: UIViewController {
             dispImageNo = 0
         }
         
-        let name = imageNameArray[dispImageNo]
+        name = imageNameArray[dispImageNo]
         
         let image = UIImage(named: name)
         
-        imageView.image = image
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let image = UIImage(named: "4336112.jpg")
         imageView.image = image
     }
     func onTimer(timer: Timer) {
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-                    resultViewController.dispImageNo = dispImageNo
+                    resultViewController.name = name
             }
 
 }
